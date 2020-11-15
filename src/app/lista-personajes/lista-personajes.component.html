@@ -1,0 +1,38 @@
+<div class="container">
+    <h1 class="gapper">Personajes Ricky y Morty</h1>
+    <i class="fas fa-search"></i>
+    <input type="text" placeholder="Buscar" id="busqueda" class="" [(ngModel)]="name" (change)="filtrar()">
+  <div class="cards">
+  
+  <div  *ngFor="let per of personajes " style="width: 18rem;">
+          <img class="card-img-top" [src]="per.image" alt="Card image cap">
+          <div class="card-body">
+            <h5><a [routerLink]="['/personaje/'+per.id]">{{per.name}}</a></h5>
+          </div>
+          
+        </div>
+  </div>
+</div>
+  <section class="ali">
+  
+    
+    <div  *ngIf=!first>
+      <div class="col-md-4">
+        <button  class="btn"(click)=consultar(prev)>Anterior</button>
+      </div>
+    </div>
+    <div  *ngIf=!last>
+      <div class="col-md-4">
+        <button  class="btn" (click)=consultar(next)>Siguiente</button>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+  
+   
+    
+
+  

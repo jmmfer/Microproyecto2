@@ -1,0 +1,23 @@
+.gapper {
+    padding-top: 2rem;
+}
+#busqueda{
+    margin: 2rem;
+}
+
+.cards{
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3,1fr);
+    margin: 0px 35px;
+}
+
+
+.ali{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 4rem;
+    
+    
+}
