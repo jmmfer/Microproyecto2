@@ -4,7 +4,7 @@
   <img src="assets/img/AAAABddiw4GEUq76B3fmiI7r6NF-GrWeEf99MjwKrfixFKM4B4o1uuitcgbuBNa3n04L5GSamUi2vex4adduBV-S2XGERxn29-ffvoRv.png" alt="Logo" class="nav-brand">
   <ul style="font-size: 40px;" class="nav-menu">
    <li>
-     <a href="/listaPersonajes">
+     <a [routerLink]="['/listaPersonajes']">
      <i class="fas fa-home"></i>
     </a>
    </li>
@@ -13,14 +13,14 @@
   </ul>
   <ul class="nav-menu-right">
       <li>
-          <a href="signin">
+          <a [routerLink]="['/signin']">
               <i class="fas fa-user"></i>
           </a>
           <ng-container *ngIf=isLoggedIn() >
-          <a href="/signin">
+          <a [routerLink]="['/signin']">
               <i class="fas fa-heart"></i>
           </a>
-          <a href="#" (click)=logout()>
+          <a href="#" (click)="logout()">
               <i class="fas fa-sign-out-alt"></i>
           </a>
         </ng-container>
